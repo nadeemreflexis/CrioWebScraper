@@ -62,12 +62,6 @@ public class TestCases {
         // Initialize and declare a HashMap ArrayList called dataList
         ArrayList<HashMap<String, Object>> dataList = new ArrayList<>();
 
-        // Declare epochTime
-        long epoch = System.currentTimeMillis() / 1000;
-
-        // Convert epochTime into string
-        String epochTime = String.valueOf(epoch);
-
         // Locate page 1
         WebElement clickOnPage = driver.findElement(By.xpath("(//ul[@class='pagination']/li/a)[1]"));
 
@@ -87,6 +81,13 @@ public class TestCases {
                 double winPercentage = Double
                         .parseDouble(row.findElement(By.xpath("./td[contains(@class,'pct')]")).getText());
 
+
+                // Declare epochTime
+                long epoch = System.currentTimeMillis() / 1000;
+
+                // Convert epochTime into string
+                String epochTime = String.valueOf(epoch);
+                
                 // Check if win percentage is less than 40%
                 if (winPercentage < 0.4) {
                     // Create a HashMap to store the data

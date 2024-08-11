@@ -21,7 +21,6 @@ Provide sample code or usage scenarios to showcase how the project works.
 ```
 
 ## Important Links:
-Details about useful external links
-Hockey team table - https://www.scrapethissite.com/pages/forms/
-Oscar winning films - https://www.scrapethissite.com/pages/ajax-javascript
+1. Hockey team table - https://www.scrapethissite.com/pages/forms/
+2. Oscar winning films - https://www.scrapethissite.com/pages/ajax-javascript
  

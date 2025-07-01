@@ -68,7 +68,8 @@ public class Utilities {
             // Store the HashMap Data in a json File
             ObjectMapper mapper = new ObjectMapper();
             try {
-                File jsonFile = new File("/Users/zaynadee/Documents/selenium-starter-2/src/test/output/" + year
+                String usrDir = System.getProperty("user.dir");
+                File jsonFile = new File(usrDir+"/src/test/resources/" + year
                         + "-oscar-winner-data.json");
                 mapper.writeValue(jsonFile, movieList);
                 System.out.println("JSON data written to: " + jsonFile.getAbsolutePath());

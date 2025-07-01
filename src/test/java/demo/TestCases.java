@@ -48,7 +48,7 @@ public class TestCases {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
-    @Test()
+    @Test
     public void testCase01() throws InterruptedException {
         driver.get("https://www.scrapethissite.com/pages/");
 
@@ -119,9 +119,9 @@ public class TestCases {
         // Store the HashMap Data in a json File
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            File jsonFile = new File(
-                    "/Users/zaynadee/Documents/selenium-starter-2/src/test/output/hockey-team-data.json");
-            objectMapper.writeValue(jsonFile, dataList);
+            String usrDir = System.getProperty("user.dir");
+            File jsonFile = new File(usrDir+"/src/test/resources/hockey-team-data.json");
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(jsonFile, dataList);
             System.out.println("JSON data written to: " + jsonFile.getAbsolutePath());
             Assert.assertTrue(jsonFile.length() != 0);
         } catch (IOException e) {
